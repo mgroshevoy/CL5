@@ -1,0 +1,21 @@
+{
+  "name": "cl5",
+  "main": "index.html",
+  "node-main": "js/index.js",
+  "inject_js_start": "js/start.js",
+  "inject_js_end": "js/end.js",
+  "node-remote": "<all_urls>",
+  "window": {
+    "icon": "icon16.png",
+    "chromium-args": "--mixed-context --remember-cert-error-decisions --ignore-certificate-errors --ignore-urlfetcher-cert-requests"
+  },
+  "dependencies": {
+    "apac": "^2.0.2",
+    "axios": "^0.15.2",
+    "cheerio": "^0.22.0",
+    "dotenv": "^4.0.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "vo": "^4.0.2"
+  }
+}

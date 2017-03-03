@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/blaze.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Links Collector for Amazon and Wallmart</title>
+</head>
+<body>
+<div class="c-overlay c-overlay--dismissable"></div>
+<div class="o-drawer u-highest o-drawer--top o-drawer--visible">
+    <div class="c-card">
+        <header class="c-card__header">
+            <h2 class="c-heading">Options</h2>
+        </header>
+        <hr>
+        <div class="o-container o-container--large">
+            <div class="c-card__body">
+                <form action="#">
+                    <div class="o-form-element">
+                        <div class="o-form-element c-input-group">
+                            <label for="brandlist"> List of brandnames:&nbsp;<br>
+                                (separated by comma)</label>
+                            <textarea class="c-field" rows="5" id="brandlist"></textarea>
+                        </div>
+                        <div class="o-form-element">
+                            <label class="c-toggle">
+                                Search for FBA only
+                                <input type="checkbox" id="FBA">
+                                <div class="c-toggle__track">
+                                    <div class="c-toggle__handle"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/options.js"></script>
+</body>
+</html>
