@@ -10,7 +10,7 @@
     "chromium-args": "--mixed-context --remember-cert-error-decisions --ignore-certificate-errors --ignore-urlfetcher-cert-requests"
   },
   "dependencies": {
-    "apac": "^2.0.2",
+    "apac": "^3.0.2",
     "axios": "^0.15.2",
     "cheerio": "^0.22.0",
     "dotenv": "^4.0.0",
