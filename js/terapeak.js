@@ -4,7 +4,7 @@ let _ = requireNode('lodash');
 let axios = requireNode('axios');
 let vo = requireNode('vo');
 let gui = requireNode('nw.gui');
-let win = gui.Window.get();
+//let win = gui.Window.get();
 
 document.getElementsByClassName('modal')[0].style.display = 'block';
 
@@ -85,7 +85,7 @@ Promise.all([idsAmazon.getItems(), idsWalmart.getItems()]).then(() => {
 function calcTera(self, arrayTera, i) {
     let totalItemsSold = 0, averagePrice = 0, monopolization = '', profitPotential = 0;
 
-    for (j = 0; j < arrayTera.length; j++) {
+    for (let j = 0; j < arrayTera.length; j++) {
         totalItemsSold += arrayTera[j].totalItemsSold;
     }
 
@@ -206,7 +206,7 @@ function outputToCSV(arrayItems, nameOfFile, arrayOfIndexes) {
  */
 function printOut(self) {
     let i, textHTML;
-    let n, arrayOfBrands = readProperty('brandlist', '').split(',');
+    let n, arrayOfBrands = idCollection.readProperty('brandlist', '').split(',');
 
     n = self.arrayOfIds.length;
     textHTML = '<div class="o-grid__cell">';
@@ -233,19 +233,6 @@ function printOut(self) {
     }
     textHTML += '</div>';
     document.getElementById(self.strStoreURL.match(/\w+(?=\.com)/).join()).innerHTML = textHTML;
-}
-
-/**
- * Read property from Chrome local storage
- * @param property String
- * @param defValue
- * @returns {*}
- */
-function readProperty(property, defValue) {
-    if (localStorage[property] == null) {
-        return defValue;
-    }
-    return localStorage[property];
 }
 
 /**

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "apac": "^3.0.2",
-    "axios": "^0.15.2",
+    "axios": "^0.16.1",
     "cheerio": "^0.22.0",
     "dotenv": "^4.0.0",
     "lodash": "^4.17.2",

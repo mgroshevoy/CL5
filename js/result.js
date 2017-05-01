@@ -1,5 +1,5 @@
-let idCollection  = requireNode('../lib/idcollection.js');
-let _ = requireNode('lodash');
+const idCollection  = requireNode('../lib/idcollection.js');
+const _ = requireNode('lodash');
 
 /**
  * Output array to .csv file
@@ -23,19 +23,6 @@ function outputToCSV(arrayItems, nameOfFile, arrayOfIndexes) {
     link.setAttribute("href", "data:text/csv;charset=utf-8,\uFEFF" + encodedUri);
     link.setAttribute("download", nameOfFile);
     link.click();
-}
-
-/**
- * Read property from Chrome local storage
- * @param property String
- * @param defValue
- * @returns {*}
- */
-function readProperty(property, defValue) {
-    if (localStorage[property] == null) {
-        return defValue;
-    }
-    return localStorage[property];
 }
 
 /**
@@ -89,7 +76,8 @@ Promise.all([idsAmazon.getItems(), idsWalmart.getItems()]).then(() => {
  */
 function printOut(self) {
     let i, textHTML;
-    let n, arrayOfBrands = readProperty('brandlist', '').split(',');
+
+    let n, arrayOfBrands = idCollection.readProperty('brandlist', '').split(',');
 
     n = self.arrayOfIds.length;
     textHTML = '<div class="o-grid__cell">';
